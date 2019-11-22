@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/magicsuggest.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/material.green-blue.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/magicsuggest.js"></script>
+    <script src="js/material.js"></script>
+</head>
+<body>
+
+    <!-- Overlay for fixed sidebar -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Material sidebar -->
+    <aside id="sidebar" class="sidebar sidebar-fixed-left sidebar-default" role="navigation">
+        <!-- Sidebar header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/user_cover.jpg);">
+            <!-- Top bar -->
+            <div class="top-bar"></div>
+            <!-- Sidebar brand image -->
+            <div class="sidebar-image">
+                <img src="img/user_avatar.jpg">
+            </div>
+            <!-- Sidebar brand name -->
+            <a class="sidebar-brand">
+                username@mail.dev
+            </a>
+        </div>
+
+        <!-- Sidebar navigation -->
+        <ul class="nav sidebar-nav">
+            <li>
+                <a href="#">
+                    <i class="sidebar-icon material-icons">perm_identity</i>
+                    Hồ sơ công ty
+                </a>
+            </li>
+            <li>
+                <a id="toggle-search-form" href="#">
+                    <i class="sidebar-icon material-icons">search</i>
+                    Tìm nhà cung cấp
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="home.html">
+                    <i class="sidebar-icon material-icons">launch</i>
+                    Đăng xuất
+                </a>
+            </li>
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--Follow Up-->
+                    <!--<span class="sidebar-badge badge-circle">i</span>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+        <!-- Sidebar divider -->
+        <!-- <div class="sidebar-divider"></div> -->
+
+        <!-- Sidebar text -->
+        <!--  <div class="sidebar-text">Text</div> -->
+    </aside>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="main-header container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <div>
+                                <a class="logo-wrapper" href="#"><img class="logo-img" alt="Brand" src="img/abc.svg"></a></div>
+                        </div>
+                        <button type="button" class="navbar-toggle sidebar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div>
+
+                        <form class="row navbar-form navbar-search-form">
+                            <input class="navbar-search-form-input col-lg-5 col-sm-4 col-md-5 col-xs-12" type="" placeholder="Tên, mã sản phẩm" name="">
+                            <select id="search_cat" class="navbar-search-select-box selectpicker col-lg-3 col-sm-3 col-md-3 col-xs-5" data-live-search="true" title="Mặt hàng" >
+                                <div class="group-search">
+                                <option data-tokens="ăn an uống uong" value="tp" class="option-header">Nhóm A</option>
+                                <option data-tokens="ăn an uống uong" value="tp">Thực phẩm</option>
+                                <option data-tokens="thước thuoc kéo keo giấy giay keo tập tap vở vo" value="vpp">Văn phòng phẩm</option>
+                                <option data-tokens="son phấn phan kem nắng nang" value="mp">Mỹ phẩm</option>
+                                </div>
+                                <option data-tokens="ăn an uống uong" value="tp" class="option-header">Nhóm B</option>
+                                <option data-tokens="ăn an uống uong" value="tp">Thực phẩm</option>
+                                <option data-tokens="thước thuoc kéo keo giấy giay keo tập tap vở vo" value="vpp">Văn phòng phẩm</option>
+                                <option data-tokens="son phấn phan kem nắng nang" value="mp">Mỹ phẩm</option>
+                            </select>
+                            <select id="search_area" class="navbar-search-select-box selectpicker col-lg-2 col-sm-3 col-md-2 col-xs-4" data-live-search="true" title="Khu vực">
+                                <option value="hn">Hà Nội</option>
+                                <option data-tokens="sài sai gòn gon" value="hcm">Hồ Chí Minh</option>
+                            </select>
+                            <button type="button" class="navbar-search-button col-lg-2 col-sm-2 col-md-2 col-xs-3">
+                                <!--<span class="glyphicon glyphicon-search"></span>-->
+                                Tìm kiếm
+                            </button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs" id="user_section_1">
+                            <li class="dropdown login-wrapper ">
+                                <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tài khoản <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-login">
+                                    <li><a  href="#0">Hồ sơ công ty</a></li>
+                                    <li><a  href="#0">Tìm nhà phân phối</a></li>
+                                    <li><a  href="home.html">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <div class="nav second-nav header-shadow">
+            <div class="container">
+                <ul class="nav navbar-nav hidden-xs">
+                    <li class="dropdown navbar-category">
+                        <a href="#" id="cat_menu" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="img/ic-burger-menu.png" height="12" width="14" style="margin-right:7px"/>Danh mục sản phẩm
+                        </a>
+                        <ul class="dropdown-menu multi-level">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Điện gia dụng</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Máy ảnh
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Ống kính - Lens
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Phụ kiện máy ảnh
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Balo</a></li>
+                                            <li><a href="#">Đầu đọc thẻ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tivi - Thiết bị nghe nhìn</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Tivi
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Loa
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Máy chiếu
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thực phẩm</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Tươi sống - Đông lạnh
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Chay - Thiên nhiên
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Thực phẩm bổ sung
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thời trang -Phụ kiện</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Quần áo
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Giày dép
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nhà cửa đời sống</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Máy ảnh
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Ống kính - Lens
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Phụ kiện máy ảnh
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Balo</a></li>
+                                            <li><a href="#">Đầu đọc thẻ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể thao - Dã ngoại</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Máy ảnh
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Ống kính - Lens
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Phụ kiện máy ảnh
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Balo</a></li>
+                                            <li><a href="#">Đầu đọc thẻ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">VPP - Quà tặng</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Máy ảnh
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Ống kính - Lens
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Phụ kiện máy ảnh
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Balo</a></li>
+                                            <li><a href="#">Đầu đọc thẻ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Làm đẹp - Sức khỏe</a>
+                                <ul class="dropdown-menu row">
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Mỹ phẩm
+                                            </li>
+                                            <li><a href="#">Máy ảnh DSLR</a></li>
+                                            <li><a href="#">Máy ảnh du lịch</a></li>
+                                            <li><a href="#">Máy ảnh chụp lấy liền</a></li>
+                                            <li><a href="#">Máy ảnh mirrorless</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Thực phẩm bổ sung
+                                            </li>
+                                            <li><a href="#">Lens Canon</a></li>
+                                            <li><a href="#">Lens Fujifilm</a></li>
+                                            <li><a href="#">Lens Sony</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <ul>
+                                            <li class="dropdown-header">
+                                                Khác
+                                            </li>
+                                            <li><a href="#">Thẻ nhớ</a></li>
+                                            <li><a href="#">Đèn flash</a></li>
+                                            <li><a href="#">Chân đế</a></li>
+                                            <li><a href="#">Bao bảo vệ</a></li>
+                                            <li><a href="#">Pin - Sạc máy</a></li>
+                                            <li><a href="#">Kính lọc - Filter</a></li>
+                                            <li><a href="#">Balo</a></li>
+                                            <li><a href="#">Đầu đọc thẻ</a></li>
+                                            <li class="menu-view-all"><a href="#">Xem tất cả<span class="caret"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--<li class="active"><a href="#">Trang chủ<span class="sr-only">(current)</span></a></li>\-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-lg hidden-xs" id="user_section_2">
+                    <li class="dropdown login-wrapper ">
+                        <a href="#" class="login-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tài khoản <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-login">
+                            <li><a  href="#0">Hồ sơ công ty</a></li>
+                            <li><a  href="#0">Tìm nhà phân phối</a></li>
+                            <li><a  href="home.html">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+            <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+                <ul class="cd-switcher">
+                    <li><a href="#0">Đăng nhập</a></li>
+                    <li><a href="#0">Đăng ký Nhà cung cấp</a></li>
+                    <li><a href="#0">Đăng ký Nhà phân phối</a></li>
+                </ul>
+
+                <div id="cd-login"> <!-- log in form -->
+                    <form class="cd-form">
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-password" for="signin-password">Mật khẩu</label>
+                            <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Mật khẩu">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <input type="checkbox" id="remember-me" checked>
+                            <label for="remember-me">Đây là máy tính cá nhân</label>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="full-width" type="submit" value="Đăng nhập" >
+                        </p>
+                    </form>
+
+                    <p class="cd-form-bottom-message"><a href="#0">Bạn gặp khó khăn với mật khẩu của mình?</a></p>
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div> <!-- cd-login -->
+
+                <div id="cd-signup"> <!-- sign up form -->
+                    <p class="cd-form-note"><i class="material-icons">announcement</i>Dành cho nhà cung cấp</p>
+                    <form class="cd-form cd-form-register">
+                        <p class="fieldset">
+                            <label class="image-replace cd-username" for="signup-ncc-tdn">Tên doanh nghiệp</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-tdn" type="text" placeholder="Tên doanh nghiệp">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-location" for="signup-ncc-dc">Địa chỉ</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-dc" type="text" placeholder="Địa chỉ">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <div class="phone-number-fieldset">
+                            <div class="row phone-instance">
+                                <p class="fieldset col-sm-12 col-md-6 name-wrapper">
+                                    <label class="image-replace cd-username" for="signup-ncc-sdt-ten[]">Tên người liên hệ</label>
+                                    <input class="full-width has-padding has-border" id="signup-ncc-sdt-ten[]" name="signup-ncc-sdt-ten[]" type="text" placeholder="Tên người liên hệ">
+                                    <a href="#0" class="add-contact" title="Thêm người liên hệ"><span class="glyphicon glyphicon-plus"></span></a>
+                                    <span class="cd-error-message">Thông báo lỗi!</span>
+                                </p>
+                                <p class="fieldset col-sm-12 col-md-6 phone-wrapper">
+                                    <label class="image-replace cd-phone" for="signup-ncc-sdt[]">Số điện thoại</label>
+                                    <input class="full-width has-padding has-border" id="signup-ncc-sdt[]" name="signup-ncc-sdt[]" type="text" placeholder="Số điện thoại">
+                                    <span class="cd-error-message">Thông báo lỗi!</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="max_contact_number" value="1" id="max_contact_number" readonly>
+                        <p class="fieldset">
+                            <label class="image-replace cd-list" for="signup-ncc-mst">Mã số thuế</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-mst" type="text" placeholder="Mã số thuế">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-list" for="signup-ncc-vdl">Vốn điều lệ</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-vdl" type="text" placeholder="Vốn điều lệ">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-username" for="signup-ncc-gd">Giám đốc</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-gd" type="text" placeholder="Giám đốc">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-commodity" for="signup-ncc-mh">Mặt hàng cung cấp</label>
+                            <input id="mhcc" name="mh[]" class="full-width has-padding has-border" id="signup-ncc-mh" type="text" placeholder="Mặt hàng cung cấp">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="signup-ncc-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-email" type="email" placeholder="E-mail">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-password" for="signup-ncc-password">Mật khẩu</label>
+                            <input class="full-width has-padding has-border" id="signup-ncc-password" type="password"  placeholder="Mật khẩu">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <input type="checkbox" id="accept-terms">
+                            <label for="accept-terms">Tôi đồng ý với <a href="#0">Điều khoản</a></label>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="full-width has-padding" type="submit" value="Tạo tài khoản Nhà cung cấp">
+                        </p>
+                    </form>
+
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div> <!-- cd-signup -->
+                <div id="cd-signup-2"> <!-- sign up form -->
+                    <p class="cd-form-note"><i class="material-icons">announcement</i>Dành cho nhà phân phối</p>
+                    <form class="cd-form cd-form-register">
+                        <p class="fieldset">
+                            <label class="image-replace cd-username" for="signup-npp-tdn">Tên doanh nghiệp</label>
+                            <input class="full-width has-padding has-border" id="signup-npp-tdn" type="text" placeholder="Tên doanh nghiệp">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-location" for="signup-npp-dc">Địa chỉ</label>
+                            <input class="full-width has-padding has-border" id="signup-npp-dc" type="text" placeholder="Địa chỉ">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <div class="phone-number-fieldset-2">
+                            <div class="row phone-instance-2">
+                                <p class="fieldset col-sm-12 col-md-6 name-wrapper">
+                                    <label class="image-replace cd-username" for="signup-npp-sdt-ten[]">Tên người liên hệ</label>
+                                    <input class="full-width has-padding has-border" id="signup-npp-sdt-ten[]" name="signup-npp-sdt-ten[]" type="text" placeholder="Tên người liên hệ">
+                                    <a href="#0" class="add-contact-2" title="Thêm người liên hệ"><span class="glyphicon glyphicon-plus"></span></a>
+                                    <span class="cd-error-message">Thông báo lỗi!</span>
+                                </p>
+                                <p class="fieldset col-sm-12 col-md-6 phone-wrapper">
+                                    <label class="image-replace cd-phone" for="signup-npp-sdt[]">Số điện thoại</label>
+                                    <input class="full-width has-padding has-border" id="signup-npp-sdt[]" name="signup-npp-sdt[]" type="text" placeholder="Số điện thoại">
+                                    <span class="cd-error-message">Thông báo lỗi!</span>
+                                </p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="max_contact_number" value="1" id="max_contact_number_2" readonly>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-list" for="signup-npp-mst">Mã số thuế</label>
+                            <input class="full-width has-padding has-border" id="signup-npp-mst" type="text" placeholder="Mã số thuế">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-commodity" for="signup-ncc-mh">Mặt hàng phân phối</label>
+                            <input id="mhpp" name="mhpp[]" class="full-width has-padding has-border" id="signup-npp-mh" type="text" placeholder="Mặt hàng phân phối">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="signup-npp-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="signup-npp-email" type="email" placeholder="E-mail">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-password" for="signup-npp-password">Mật khẩu</label>
+                            <input class="full-width has-padding has-border" id="signup-npp-password" type="password"  placeholder="Mật khẩu">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <input type="checkbox" id="accept-terms-2">
+                            <label for="accept-terms-2">Tôi đồng ý với <a href="#0">Điều khoản</a></label>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="full-width has-padding" type="submit" value="Tạo tài khoản Nhà phân phối">
+                        </p>
+                    </form>
+
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div> <!-- cd-signup -->
+
+                <div id="cd-reset-password"> <!-- reset password form -->
+                    <p class="cd-form-message">Điền email được sử dụng để truy cập vào tài khoản. Hướng dẫn lấy lại mật khẩu sẽ được gởi đến email này.</p>
+
+                    <form class="cd-form">
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                            <span class="cd-error-message">Thông báo lỗi!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="full-width has-padding" type="submit" value="Reset password">
+                        </p>
+                    </form>
+
+                    <p class="cd-form-bottom-message"><a href="#0">Quay lại đăng nhập</a></p>
+                </div> <!-- cd-reset-password -->
+                <a href="#0" class="cd-close-form">Đóng</a>
+            </div> <!-- cd-user-modal-container -->
+        </div> <!-- cd-user-modal -->
+        <main>
+            <div class="container ads">
+                <div id="carousel-example-generic" class="carousel slide carousel-ads" data-ride="carousel">
+                    <!-- Indicators -->
+                    <!--<ol class="carousel-indicators">-->
+                    <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+                    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+                    <!--</ol>-->
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="img/ads/ads1.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Banner 1</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/ads/ads2.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Banner 2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/ads/ads3.jpg" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Banner 3</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div> <!-- Carousel -->
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="ncc-navbar">
+                            <h5>
+                                <a href="#">
+                                    Nhà cung cấp hàng đầu
+                                </a>
+                            </h5>
+                            <ol class="breadcrumb hidden-xs">
+                                <li><a href="#">Điện tử</a></li>
+                                <li><a href="#">May mặt</a></li>
+                                <li><a href="#">Thực phẩm</a></li>
+                                <li><a href="#">VPP - Quà tặng</a></li>
+                                <li><a href="#">Tất cả</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="carousel slide multi-item-carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                                        <div class="thumbnail media">
+                                            <div class="media-body">
+                                                <div class="vip-top">
+                                                    <div class="media-left">
+                                                        <a class="vip_avatar center-cropped" href="#" style="background-image: url('img/sony.jpg');">
+                                                            <img src="img/sony.jpg" height="50" width="50"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <h5><a class="media-heading">Sony</a></h5>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-commodity">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle commodity-tag-section">
+                                                        <a class="item-tags">Máy ảnh</a>
+                                                        <a class="item-tags">Điện thoại</a>
+                                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-location">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <a class="item-tags">Hồ Chí Minh</a><a class="item-tags">Đà Nẵng</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row vip_img_wrapper">
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/xz.jpg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/tivi.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/headphone.jpeg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/camera.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                                        <div class="thumbnail media">
+                                            <div class="media-body">
+                                                <div class="vip-top">
+                                                    <div class="media-left">
+                                                        <a class="vip_avatar center-cropped" href="#" style="background-image: url('img/samsung.jpg');">
+                                                            <img src="img/samsung.jpg" height="50" width="50"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <h5><a class="media-heading">Samsung</a></h5>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-commodity">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle commodity-tag-section">
+                                                        <a class="item-tags">Di động</a>
+                                                        <a class="item-tags">Gia dụng</a>
+                                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-location">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <a class="item-tags">Toàn quốc</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row vip_img_wrapper">
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/hdr-pj440-1.jpeg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/playstation.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/bdp-s5500-2.jpeg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/xperia-z3-6.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                                        <div class="thumbnail media">
+                                            <div class="media-body">
+                                                <div class="vip-top">
+                                                    <div class="media-left">
+                                                        <a class="vip_avatar center-cropped" href="#" style="background-image: url('img/LG.jpg');">
+                                                            <img src="img/sony.jpg" height="50" width="50"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <h5><a class="media-heading">LG Electronic</a></h5>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-commodity">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle commodity-tag-section">
+                                                        <a class="item-tags">Điện tử</a>
+                                                        <a class="item-tags">Điện lạnh</a>
+                                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-location">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <a class="item-tags">Toàn quốc</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row vip_img_wrapper">
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/ps4500-3.jpg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/hdr-pj440-1.jpeg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/m5-1.jpg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/wm1a-3.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                                        <div class="thumbnail media">
+                                            <div class="media-body">
+                                                <div class="vip-top">
+                                                    <div class="media-left">
+                                                        <a class="vip_avatar center-cropped" href="#" style="background-image: url('img/nokia.jpg');">
+                                                            <img src="img/sony.jpg" height="50" width="50"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <h5><a class="media-heading">Nokia</a></h5>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-commodity">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle commodity-tag-section">
+                                                        <a class="item-tags">Điện thoại</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vip-location">
+                                                    <div class="media-left media-middle">
+                                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <a class="item-tags">Hồ Chí Minh</a><a class="item-tags">Đà Nẵng</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row vip_img_wrapper">
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/nokia-3.jpg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/nokia-4.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/nokia-lumia-630-den.jpg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-xs-6 ">
+                                                        <a href="#" style="background-image: url('img/Nokia-Lumia-930-Nokia-MixRadio.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left small carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                            <a class="right small carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="ncc-navbar">
+                            <h5>
+                                <a href="#">
+                                    Tin từ các nhà cung cấp
+                                </a>
+                            </h5>
+                            <ol class="breadcrumb hidden-xs">
+                                <li><a href="#">Điện tử</a></li>
+                                <li><a href="#">May mặt</a></li>
+                                <li><a href="#">Thực phẩm</a></li>
+                                <li><a href="#">VPP - Quà tặng</a></li>
+                                <li><a href="#">Tất cả</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ncc-ind">
+                    <div class="row thumbnail media">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                            <div class="media-left">
+                                <a href="#" class="ncc-avatar-normal" style="background-image: url('img/vinamit.png');">
+                                    <img class="media-object" src="img/vinamit.png" alt="Vinamit">
+                                </a>
+                            </div>
+                            <div class="media-body media-middle">
+                                <h3 class="media-heading ncc-title"><a href="#">Vinamit</a></h3>
+                                <div class="ncc-commodity">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                    </div>
+                                    <div class="media-body media-middle commodity-tag-section">
+                                        <a class="item-tags">Trái cây sấy</a>
+                                    </div>
+                                </div>
+                                <div class="ncc-location">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a class="item-tags">Đà Nẵng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--
+                            -->
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                            <div class="row ncc_img_wrapper">
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamit-2.jpg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamit-3.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamit-4.jpg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ncc-ind">
+                    <div class="row thumbnail media">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                            <div class="media-left">
+                                <a href="#" class="ncc-avatar-normal" style="background-image: url('img/vinamilk.png');">
+                                    <img class="media-object" src="img/sony.jpg" alt="Vinamilk">
+                                </a>
+                            </div>
+                            <div class="media-body media-middle">
+                                <h3 class="media-heading ncc-title"><a href="#">Vinamilk</a></h3>
+                                <div class="ncc-commodity">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                    </div>
+                                    <div class="media-body media-middle commodity-tag-section">
+                                        <a class="item-tags">Sữa nước</a>
+                                        <a class="item-tags">Sữa bột</a>
+                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                    </div>
+                                </div>
+                                <div class="ncc-location">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a class="item-tags">Toàn quốc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                            <div class="row ncc_img_wrapper">
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamilk-1.png');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamilk-2.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamilk-4.jpg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/vinamilk-1.png');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ncc-ind">
+                    <div class="row thumbnail media">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                            <div class="media-left">
+                                <a href="#" class="ncc-avatar-normal" style="background-image: url('img/logo-kinh-do.gif');">
+                                    <img class="media-object" src="img/sony.jpg" alt="Kinh Đô">
+                                </a>
+                            </div>
+                            <div class="media-body media-middle">
+                                <h3 class="media-heading ncc-title"><a href="#">Kinh Đô</a></h3>
+                                <div class="ncc-commodity">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                    </div>
+                                    <div class="media-body media-middle commodity-tag-section">
+                                        <a class="item-tags">Bánh</a>
+                                        <a class="item-tags">Kẹo</a>
+                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                    </div>
+                                </div>
+                                <div class="ncc-location">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a class="item-tags">Toàn quốc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                            <div class="row ncc_img_wrapper">
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo1.png');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo2.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo3.png');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo4.png');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo5.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/kinhdo2.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ncc-ind">
+                    <div class="row thumbnail media">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                            <div class="media-left">
+                                <a href="#" class="ncc-avatar-normal" style="background-image: url('img/sony.jpg');">
+                                    <img class="media-object" src="img/sony.jpg" alt="Sony">
+                                </a>
+                            </div>
+                            <div class="media-body media-middle">
+                                <h3 class="media-heading ncc-title"><a href="#">Sony</a></h3>
+                                <div class="ncc-commodity">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-tag" title="Mặc hàng cung cấp"></span>
+                                    </div>
+                                    <div class="media-body media-middle commodity-tag-section">
+                                        <a class="item-tags">Di động</a>
+                                        <a class="item-tags">Gia dụng</a>
+                                        <a class="item-tags" title="Xem tất cả">...</a>
+                                    </div>
+                                </div>
+                                <div class="ncc-location">
+                                    <div class="media-left media-middle">
+                                        <span class="glyphicon glyphicon-map-marker" title="Khu vực"></span>
+                                    </div>
+                                    <div class="media-body media-middle">
+                                        <a class="item-tags">Toàn quốc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                            <div class="row ncc_img_wrapper">
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/xz.jpg');" class="center-cropped thumbnail"><img src="img/xz.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/tivi.jpg');" class="center-cropped thumbnail"><img src="img/tivi.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/headphone.jpeg');" class="center-cropped thumbnail"><img src="img/headphone.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/camera.jpeg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/xperia-z3-6.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+                                    <a href="#" style="background-image: url('img/xaul-1.jpg');" class="center-cropped thumbnail"><img src="img/camera.jpeg" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation" class="pag-center">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </main>
+        <footer id="footer" class="footer-distributed">
+
+            <div class="footer-left">
+
+                <a class="logo-wrapper" href="#"><img class="logo-img" alt="Brand" src="img/abc.svg" width="150"></a>
+
+                <p class="footer-links">
+                    <a href="#">Trang chủ</a>
+                    ·
+                    <a href="#">Blog</a>
+                    ·
+                    <a href="#">Pricing</a>
+                    ·
+                    <a href="#">About</a>
+                    ·
+                    <a href="#">Faq</a>
+                    ·
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">Alphabet &copy; 2017</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>28 Phan Liêm</span> Quận 1, TP.HCM</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+84 123 4567890</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">support@mail.dev</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>Về chúng tôi</span>
+                    Nếu bạn định sử dụng một đoạn Lorem Ipsum, bạn nên kiểm tra kĩ để chắn chắn là không có gì nhạy cảm được giấu ở giữa đoạn văn bản.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </div>
+
+
+
+</body>
+</html>

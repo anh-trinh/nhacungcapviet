@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div id="default-navbar">
+        <div class="container">
+            <div class="row upper_header">
+                <ul class="largenav pull-right">
+                    <li class="upper-links"><a class="links" href="#">Link 1</a></li>
+                    <li class="upper-links"><a class="links" href="#">Link 2</a></li>
+                    <li class="upper-links">
+                        <a class="links" href="#">
+                            <svg class="" width="16px" height="12px" style="overflow: visible;">
+                                <path d="M8.037 17.546c1.487 0 2.417-.93 2.417-2.417H5.62c0 1.486.93 2.415 2.417 2.415m5.315-6.463v-2.97h-.005c-.044-3.266-1.67-5.46-4.337-5.98v-.81C9.01.622 8.436.05 7.735.05 7.033.05 6.46.624 6.46 1.325v.808c-2.667.52-4.294 2.716-4.338 5.98h-.005v2.972l-1.843 1.42v1.376h14.92v-1.375l-1.842-1.42z" fill="#fff"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row main_header">
+                <div class="col-sm-2 col-md-2">
+                    <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Brand</span></h2>
+                    <h1 style="margin:0px;"><span class="largenav">Brand</span></h1>
+                </div>
+                <div class="default-navbar-search col-sm-8 col-xs-11 col-md-8">
+                    <div class="row row_search">
+                        <input class="header_search_form_input col-lg-6 col-sm-5 col-xs-12" type="" placeholder="Tên, mã sản phẩm" name="">
+                        <select id="search_cat" class="search_select_box_header selectpicker col-lg-3 col-sm-3 col-xs-5" data-live-search="true" title="Mặt hàng">
+                            <option data-tokens="ăn an uống uong" value="tp">Thực phẩm</option>
+                            <option data-tokens="thước thuoc kéo keo giấy giay keo tập tap vở vo" value="vpp">Văn phòng phẩm</option>
+                            <option data-tokens="son phấn phan kem nắng nang" value="mp">Mỹ phẩm</option>
+                        </select>
+                        <select id="search_area" class="search_select_box_header selectpicker col-lg-2 col-sm-3 col-xs-5" data-live-search="true" multiple title="Tỉnh thành">
+                            <option value="hn">Hà Nội</option>
+                            <option data-tokens="sài sai gòn gon" value="hcm">Hồ Chí Minh</option>
+                        </select>
+                        <button type="button" class="default-navbar-button col-lg-1 col-sm-1 col-xs-2">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cart largenav col-sm-2 col-md-2">
+                    <a class="login-button">
+                        Đăng nhập
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" class="dropdown-toggle menu_cat" data-toggle="dropdown"> <span class="glyphicon glyphicon-th" style="padding-right:10px"></span>Danh mục sản phẩm</a>
+                        <ul class="dropdown-menu multi-level">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">One more separated link</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="container" style="background-color: #2874f0; padding-top: 10px;">
+            <span class="sidenav-heading">Home</span>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        </div>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <img class="ads" src="http://placehold.it/1000x400">
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="thumbnail">
+            <div class="row ">
+                <div class="col col-xs-4">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://placehold.it/75x75" alt="Object">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Tên Công Ty</h4>
+                            ...
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xs-8">
+                    <img src="http://placehold.it/100x100">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
